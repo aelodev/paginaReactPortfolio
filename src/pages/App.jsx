@@ -8,6 +8,7 @@ import {FaJava} from "react-icons/fa";
 import cambridge from '../assets/cambridge.svg';
 import ExpandableCard from "../components/ExpandableCard.jsx";
 import React from "react";
+import {Link} from "react-router-dom";
 
 
 function App() {
@@ -131,9 +132,11 @@ function App() {
                         </p>
                     </ExpandableCard>
 
-                    <Card width="450px" height="250px" title={"Publicaciones"} color={colors.yellow}>
-                        <p>This is the card content.</p>
-                    </Card>
+                    <Link to={"/blog"} className="text-white">
+                        <Card width="450px" height="250px" title={"Publicaciones"} color={colors.yellow} >
+                            <p>This is the card content.</p>
+                        </Card>
+                    </Link>
                 </div>
             </div>
         </div>
