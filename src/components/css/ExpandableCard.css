@@ -1,0 +1,49 @@
+.card {
+    background-color: rgba(56, 56, 56, 0.99);
+    display: block;
+    border: 1px solid #5b5b5b;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px var(--color), 0 0 20px var(--color), 0 0 30px var(--color), 0 0 40px var(--color);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card.expanded {
+    position: fixed;
+    z-index: 1001;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+}
+
+.card .text {
+    max-height: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.card.expanded .text {
+    max-height: none;
+    white-space: normal;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
