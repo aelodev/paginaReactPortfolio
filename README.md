@@ -1,6 +1,6 @@
 # Portfolio en React
 
-Este proyecto es un portfolio personal desarrollado en React, con el objetivo de mostrar mis habilidades.
+Este proyecto es un portfolio personal desarrollado en React, con el objetivo de mostrar mis habilidades.[node_modules](node_modules)
 Viene a ser una versión mejorada de mi portfolio anterior, que estaba desarrollado con estas tecnologías:
 
 [![Static Badge](https://img.shields.io/badge/HTML-white?style=flat&logo=HTML5&logoColor=%23FFF&labelColor=rgba(255%2C%20142%2C%200%2C%201))]()

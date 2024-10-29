@@ -1,27 +1,33 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import PropTypes from 'prop-types';
 import './css/ExpandableCard.css';
 
-function ExpandableCard({ width, height, color, title, children, className }) {
+function ExpandableCard({width, height, color, title, children, className}) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleExpand = () => {
         setIsExpanded(!isExpanded);
     };
 
+
     return (
         <>
             {isExpanded && <div className="overlay" onClick={toggleExpand}></div>}
             <div
                 className={`card ${className} ${isExpanded ? 'expanded' : ''}`}
-                style={{ '--color': color, width: isExpanded ? '80%' : width, height: isExpanded ? '80%' : height }}
-                onClick={toggleExpand}
+                style={{
+                    '--color': color,
+                    width: isExpanded ? '80%' : width,
+                    height: isExpanded ? (window.innerWidth <= 768 ? '500px' : '80%' ): height,
+                    overflowY: isExpanded ? 'scroll' : 'scroll',
+
+                }} onClick={toggleExpand}
             >
                 <h2 className="text-lg font-bold">{title}</h2>
                 <div className="text">
                     {children}
                 </div>
-                {!isExpanded && <p style={{ color: '#007bff' }}>...</p>}
+                {!isExpanded && <p style={{color: '#007bff'}}>...</p>}
             </div>
         </>
     );

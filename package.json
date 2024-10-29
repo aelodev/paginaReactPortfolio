@@ -1,17 +1,21 @@
 {
-  "name": "portfolio_remastered",
+  "name": "portfolio-remastered",
+  "homepage": "https://lucenabo.github.io/",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@react-buddy/ide-toolbox": "^2.4.0",
     "fs": "^0.0.1-security",
+    "gh-pages": "^6.2.0",
     "path": "^0.12.7",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
