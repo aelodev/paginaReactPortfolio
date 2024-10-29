@@ -4,7 +4,7 @@ import Card from "../components/Card.jsx";
 import {colors, wordColors} from "../assets/NeonColors.js";
 import Carousel from "../components/Carousel.jsx";
 import WordNeonColor from "../ui/WordNeonColor.jsx";
-import {SiAndroid, SiMysql} from "react-icons/si";
+import {SiAndroid, SiGithub, SiLinkedin, SiMysql} from "react-icons/si";
 import {FaJava} from "react-icons/fa";
 import cambridge from '../assets/cambridge.svg';
 import ExpandableCard from "../components/ExpandableCard.jsx";
@@ -205,6 +205,14 @@ class App extends Component {
                                 </Link>
                             </div>
                         </div>
+                        <div className="absolute" style={{display: 'flex', flexDirection: 'row', gap: '1rem', right: 40, bottom: 20}}>
+                            <Link to={"https://github.com/Lucenabo"}>
+                            <SiGithub className="text-4xl social text-white "/>
+                        </Link>
+                            <Link to={"https://www.linkedin.com/in/alucenad/"}>
+                            <SiLinkedin className="text-4xl social text-blue-400"/>
+                            </Link>
+                        </div>
                     </div>)}
                 {!this.state.matches && (
 
@@ -220,7 +228,7 @@ class App extends Component {
                     }}>
                         <div style={{display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem'}}>
                             <h1>Alejandro Lucena</h1>
-                           <h2>Desarrollador&nbsp;
+                            <h2>Desarrollador&nbsp;
                                 <TypeAnimation delay={350} infinite={true}>
                                     {[
                                         <WordNeonColor key=" web" word="web" color={wordColors.darkblue}
@@ -405,6 +413,14 @@ class App extends Component {
                                 </Card>
                             </Link>
                         </div>
+                        <footer style={{display: 'flex', flexDirection: 'row', gap: '1rem'}}>
+                            <Link to={"https://github.com/Lucenabo"}>
+                                <SiGithub className="text-4xl social text-white "/>
+                            </Link>
+                            <Link to={"https://www.linkedin.com/in/alucenad/"}>
+                                <SiLinkedin className="text-4xl social text-blue-400"/>
+                            </Link>
+                        </footer>
                     </div>
                 )
                 }
