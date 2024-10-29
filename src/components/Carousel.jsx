@@ -10,7 +10,6 @@ import {
 } from 'react-icons/si';
 import {FaJava} from 'react-icons/fa';
 import ReactSimplyCarousel from 'react-simply-carousel';
-import React from "react";
 
 function Carousel() {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);

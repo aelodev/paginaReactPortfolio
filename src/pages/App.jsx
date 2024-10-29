@@ -7,7 +7,6 @@ import {SiAndroid, SiMysql} from "react-icons/si";
 import {FaJava} from "react-icons/fa";
 import cambridge from '../assets/cambridge.svg';
 import ExpandableCard from "../components/ExpandableCard.jsx";
-import React from "react";
 import {Link} from "react-router-dom";
 
 
@@ -95,7 +94,7 @@ function App() {
                             <br/>
                             <br/>
                             En ese grado medio aprendí los fundamentos de la informática, como el hardware, software y
-                            redes. También sobre mi
+                            redes. También sobre el
                             camino en ese grado, me interesó Linux, lo había utilizado antes pero solamente en mi
                             antiguo instituto con su
                             famoso Guadalinex, en este caso utilizaría la distro Parrot, ya que estaba enfocado en el
@@ -132,9 +131,9 @@ function App() {
                         </p>
                     </ExpandableCard>
 
-                    <Link to={"/blog"} className="text-white">
+                    <Link to={"/"}  className="text-white">
                         <Card width="450px" height="250px" title={"Publicaciones"} color={colors.yellow} >
-                            <p>This is the card content.</p>
+                            <p>Disponible pronto...</p>
                         </Card>
                     </Link>
                 </div>
