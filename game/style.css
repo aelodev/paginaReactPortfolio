@@ -1,0 +1,30 @@
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes show {
+    100% {
+        opacity: 0;
+    }
+    0% {
+        opacity: 1;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.hide-animation {
+    animation: show 1s ease-out;
+}
+
+.show-animation {
+    animation: show 1s ease-out reverse;
+}
