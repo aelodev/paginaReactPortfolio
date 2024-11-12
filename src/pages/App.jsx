@@ -420,6 +420,9 @@ class App extends Component {
                             <Link to={"https://www.linkedin.com/in/alucenad/"}>
                                 <SiLinkedin className="text-4xl social text-blue-400"/>
                             </Link>
+                            <Link to={"/games"}>
+                                <button className="btn btn-blue">Juegos</button>
+                            </Link>
                         </footer>
                     </div>
                 )

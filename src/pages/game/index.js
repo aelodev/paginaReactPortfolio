@@ -15,15 +15,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 textIntroDiv.classList.add('hide');
             }, 1000);
         }
-    }, 200);
+    }, 4000);
 
     setTimeout(function () {
         const elements = cardContainer.children;
         for (let i = 0; i < elements.length; i++) {
-            createCards.classList.remove('hide');
             elements[i].classList.add('show-animation');
         }
-    }, 200)
+        setTimeout(function () {
+            createCards.classList.remove('hide');
+        }, 1000);
+    }, 6000)
 
     cardSection.classList.remove('hide');
     cardSection.classList.add('show-animation');

@@ -10,6 +10,7 @@ function Pages() {
                 <Route path="/" element={<App/>}/>
                 <Route path="/blog" element={<Blog/>}/>
                 <Route path="/blog/artone" element={<ArtOne/>}/>
+                <Route path="/game" element={<iframe src="/src/pages/game/index.html" style={{ height: '100vh', border: 'none'}} title="Game"/>}/>
             </Routes>
         </Router>
     );
