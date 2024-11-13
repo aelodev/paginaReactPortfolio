@@ -42,7 +42,6 @@ const GameComponent = () => {
     // Function to handle checking the answer
     const checkAnswer = () => {
         if (inputValue.trim().toLowerCase() === gameCards[currentCardIndex].key.toLowerCase()) {
-            alert("¡Correcto!");
             setInputValue('');
             // Move to next card, or end game if no more cards
             if (currentCardIndex < gameCards.length - 1) {
