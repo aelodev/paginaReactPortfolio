@@ -74,6 +74,9 @@ const GameComponent = () => {
     // Iniciar el juego con cartas aleatorias
     const startGame = () => {
         if (initialCards.length > 0) {
+            const textIntro = document.querySelector(".text-intro-section");
+            textIntro.classList.add("hide-animation");
+            textIntro.classList.add("hide")
             const shuffledCards = [...initialCards].sort(() => Math.random() - 0.5); // Barajar las cartas
             setGameCards(shuffledCards); // Cargamos las cartas barajadas para el juego
             setCurrentCardIndex(0); // Empieza desde la primera carta
@@ -101,12 +104,22 @@ const GameComponent = () => {
             } else {
                 alert("¡Has completado todas las cartas!");
                 setGameStarted(false);
-                setGameCards([]); // Vaciar cartas al terminar
+                alert("La página se recargará en 10 segundos.");
+                setTimeout(() => {
+                    window.location.reload();
+                } , 10000);
             }
         } else {
             alert("Inténtalo de nuevo.");
         }
     };
+
+
+    window.onbeforeunload = function(event) {
+        event.preventDefault();
+        event.returnValue = 'Si refrescas la página, se perderá todo el progreso. ¿Estás seguro de que quieres refrescar?';
+    };
+
 
         
 
@@ -121,7 +134,6 @@ const GameComponent = () => {
             {/* Mostrar las cartas en la sección de juego */}
             {gameStarted && currentCardIndex !== null && (
                 <section className="game-section show-animation">
-                    <h2>Juego</h2>
                     <div id="game-container">
                         <div id="game-card">
                             <h3>{gameCards[currentCardIndex].value}</h3> {/* Muestra la definición */}
@@ -130,7 +142,7 @@ const GameComponent = () => {
                             <input
                                 type="text"
                                 id="game-input"
-                                placeholder="Escribe la palabra clave"
+                                placeholder="Escribe la palabra"
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                             />
