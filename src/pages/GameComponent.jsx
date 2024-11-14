@@ -71,7 +71,6 @@ const GameComponent = () => {
     const getRandomIndex = (max) => {
         return Math.floor(Math.random() * max);
     };
-
     // Iniciar el juego con cartas aleatorias
     const startGame = () => {
         if (initialCards.length > 0) {
@@ -84,9 +83,17 @@ const GameComponent = () => {
         }
     };
 
+    // Función para normalizar texto (quitar tildes y poner en minúsculas)
+    const normalizeText = (text) => {
+        return text
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase();
+    };
+
     // Verificar la respuesta
     const checkAnswer = () => {
-        if (inputValue.trim().toLowerCase() === gameCards[currentCardIndex].key.toLowerCase()) {
+        if (normalizeText(inputValue.trim()) === normalizeText(gameCards[currentCardIndex].key)) {
             alert("¡Correcto!");
             setInputValue('');
             if (currentCardIndex < gameCards.length - 1) {
@@ -101,10 +108,12 @@ const GameComponent = () => {
         }
     };
 
+        
+
     return (
         <main>
             <section className="text-intro-section">
-                <h1>Juego de geografía</h1>
+                <h1>Juego de estudiar para Nadiacita</h1>
                 <p>En este juego, intenta adivinar la palabra clave que corresponde a cada definición.</p>
                 <button onClick={startGame}>Empezar juego</button>
             </section>
@@ -128,6 +137,9 @@ const GameComponent = () => {
                             <button id="game-submit-button" onClick={checkAnswer}>
                                 Comprobar
                             </button>
+                        <button id="game-show-answer-button" onClick={() => alert(gameCards[currentCardIndex].key)}>
+                            Mostrar respuesta
+                        </button>
                         </div>
                     </div>
                 </section>
