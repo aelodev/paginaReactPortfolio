@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
-import './game.css'
+import React, { useState } from "react";
+import "./game.css";
 
 const GameComponent = () => {
-  const [gameStarted, setGameStarted] = useState(false)
-  const [currentCardIndex, setCurrentCardIndex] = useState(null)
-  const [inputValue, setInputValue] = useState('')
+  const [gameStarted, setGameStarted] = useState(false);
+  const [currentCardIndex, setCurrentCardIndex] = useState(null);
+  const [inputValue, setInputValue] = useState("");
 
   // Mapa de palabras y definiciones predefinidas
   const initialCards = [
+    /**
     {
       key: 'Cambio climático',
       value:
@@ -342,35 +343,56 @@ const GameComponent = () => {
       value:
         'Obra de ingeniería hidráulica que conecta dos cuencas hidrográficas, una excedentaria y otra deficitaria con el fin de abastecer de agua a la cuenca de menor caudal y de esta manera poder satisfacer sus necesidades hídricas.',
     },
-  ]
+    */
+    {
+      key: "Bosque caducifolio",
+      value:
+        "Relativo a plantas o formaciones vegetales que pierden su hoja durante la estación fría, cuando reducen su actividad biológica. En España es característico del clima oceánico. Presentan árboles de tronco recto, liso y hojas anchas, como el roble o el haya, y sotobosque pobre.",
+    },
+    {
+      key: "Bosque perennifolio",
+      value:
+        "Relativo a plantas o formaciones vegetales que mantienen la hoja todo el año. En España es característico de la región biogeográfica mediterránea. Presentan árboles con corteza gruesa, raíces profundas y hojas duras para adaptarse a la aridez. Las especies más representativas son la encina, el alcornoque o el pino.",
+    },
+    {
+      key: "Endemismo",
+      value:
+        "Relativo a especies vegetales o animales que son propias y exclusivas de un determinado ámbito geográfico.",
+    },
+    {
+      key: "Flora",
+      value:
+        "Conjunto de especies y variedades de plantas que viven en un espacio o ecosistema determinado.",
+    },
+  ];
 
-  const [gameCards, setGameCards] = useState([]) // Almacena las cartas para el juego actual
+  const [gameCards, setGameCards] = useState([]); // Almacena las cartas para el juego actual
   // Función para obtener un índice aleatorio
   const getRandomIndex = (max) => {
-    return Math.floor(Math.random() * max)
-  }
+    return Math.floor(Math.random() * max);
+  };
   // Iniciar el juego con cartas aleatorias
   const startGame = () => {
     if (initialCards.length > 0) {
-      const textIntro = document.querySelector('.text-intro-section')
-      textIntro.classList.add('hide-animation')
-      textIntro.classList.add('hide')
-      const shuffledCards = [...initialCards].sort(() => Math.random() - 0.5) // Barajar las cartas
-      setGameCards(shuffledCards) // Cargamos las cartas barajadas para el juego
-      setCurrentCardIndex(0) // Empieza desde la primera carta
-      setGameStarted(true)
+      const textIntro = document.querySelector(".text-intro-section");
+      textIntro.classList.add("hide-animation");
+      textIntro.classList.add("hide");
+      const shuffledCards = [...initialCards].sort(() => Math.random() - 0.5); // Barajar las cartas
+      setGameCards(shuffledCards); // Cargamos las cartas barajadas para el juego
+      setCurrentCardIndex(0); // Empieza desde la primera carta
+      setGameStarted(true);
     } else {
-      alert('No hay cartas para jugar.')
+      alert("No hay cartas para jugar.");
     }
-  }
+  };
 
   // Función para normalizar texto (quitar tildes y poner en minúsculas)
   const normalizeText = (text) => {
     return text
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase()
-  }
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  };
 
   // Verificar la respuesta
   const checkAnswer = () => {
@@ -378,28 +400,28 @@ const GameComponent = () => {
       normalizeText(inputValue.trim()) ===
       normalizeText(gameCards[currentCardIndex].key)
     ) {
-      alert('¡Correcto!')
-      setInputValue('')
+      alert("¡Correcto!");
+      setInputValue("");
       if (currentCardIndex < gameCards.length - 1) {
-        setCurrentCardIndex(currentCardIndex + 1)
+        setCurrentCardIndex(currentCardIndex + 1);
       } else {
-        alert('¡Has completado todas las cartas!')
-        setGameStarted(false)
-        alert('La página se recargará en 10 segundos.')
+        alert("¡Has completado todas las cartas!");
+        setGameStarted(false);
+        alert("La página se recargará en 10 segundos.");
         setTimeout(() => {
-          window.location.reload()
-        }, 10000)
+          window.location.reload();
+        }, 10000);
       }
     } else {
-      alert('Inténtalo de nuevo.')
+      alert("Inténtalo de nuevo.");
     }
-  }
+  };
 
   window.onbeforeunload = function (event) {
-    event.preventDefault()
+    event.preventDefault();
     event.returnValue =
-      'Si refrescas la página, se perderá todo el progreso. ¿Estás seguro de que quieres refrescar?'
-  }
+      "Si refrescas la página, se perderá todo el progreso. ¿Estás seguro de que quieres refrescar?";
+  };
 
   return (
     <main>
@@ -417,7 +439,7 @@ const GameComponent = () => {
         <section className="game-section show-animation">
           <div id="game-container">
             <div id="game-card">
-              <h3>{gameCards[currentCardIndex].value}</h3>{' '}
+              <h3>{gameCards[currentCardIndex].value}</h3>{" "}
               {/* Muestra la definición */}
             </div>
             <div id="game-input-container">
@@ -442,7 +464,7 @@ const GameComponent = () => {
         </section>
       )}
     </main>
-  )
-}
+  );
+};
 
-export default GameComponent
+export default GameComponent;
