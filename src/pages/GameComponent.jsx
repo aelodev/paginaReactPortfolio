@@ -8,6 +8,7 @@ const GameComponent = () => {
 
   // Mapa de palabras y definiciones predefinidas
   const initialCards = [
+    /*
     {
       key: "Cambio climático",
       value:
@@ -502,6 +503,65 @@ const GameComponent = () => {
       value:
         "Proceso de crecimiento residencial de las periferias urbanas hacia zonas rurales, provocando un desplazamiento de residentes desde el centro de la ciudad hacia áreas suburbanas. También incluye zonas industriales y comerciales.",
     },
+  */
+    {
+      key: "Agricultura de regadío", value: "Práctica agraria consistente en el uso de procesos y técnicas para suministrar a los cultivos la cantidad de agua necesaria para su desarrollo o para mejorar la producción de la explotación, supliendo la ausencia o insuficiencia de las precipitaciones atmosféricas."
+    },
+    {
+      key: "Agrociudad", value: "Núcleo de población que, por su tamaño, podría considerarse una ciudad, pero por las funciones que desempeña son principalmente rurales."
+    },
+    {
+      key: "Barbecho", value: "Parte de una explotación agrícola cultivada con técnicas de rotación, que queda temporalmente sin cultivar, con el objetivo de que se regenere el suelo de forma natural en ese tiempo."
+    },
+    {
+      key: "Dehesa", value: "Tipo de explotación agro-silvo-pastoril propia de la zona mediterránea y del sur de España, en la que se combinan actividades agrícolas, ganaderas y forestales en zonas ahuecadas de bosque mediterráneo, dando lugar a un paisaje cultural creado y mantenido por la población local. Las especies dominantes son la encina y el alcornoque."
+    },
+    {
+      key: "Explotación agraria", value: "Conjunto de parcelas que cultiva un mismo agricultor, independientemente de su forma de tenencia (propiedad, arrendamiento, aparcería, etc.)."
+    },
+    {
+      key: "Hábitat concentrado", value: "Tipo de poblamiento o forma que tiene la población de un lugar de ocupar el territorio, en el que las viviendas forman un núcleo continuo sin espacios agrarios entre ellas."
+    },
+    {
+      key: "Hábitat disperso", value: "Tipo de poblamiento o forma que tiene la población de un lugar de ocupar el territorio, en el que las viviendas se encuentran aisladas unas de otras y rodeadas de la propia explotación agraria, existiendo un pequeño núcleo central en el que se encuentran concentrados los servicios del municipio."
+    },
+    {
+      key: "Latifundio", value: "Explotación agraria de gran tamaño, normalmente de producción extensiva orientada al mercado. En España se localiza fundamentalmente en la mitad sur."
+    },
+    {
+      key: "Minifundio", value: "Explotación agraria de pequeño tamaño, cuya producción suele ser de policultivo y estar orientada al autoconsumo. En España se localiza sobre todo en el norte y levante."
+    },
+    {
+      key: "Monocultivo", value: "Sistema de cultivo basado en la producción de un único producto en toda la explotación agrícola. Este tipo de producción va destinada al mercado y está asociada a grandes explotaciones."
+    },
+    {
+      key: "Parcela de cultivo", value: "Porción pequeña de terreno, considerada la unidad técnico-económica de la explotación agraria y delimitada por una linde común."
+    },
+    {
+      key: "Política Agraria Común (PAC)", value: "Normas acerca de la agricultura decididas por la Unión Europea para los países miembros. Su objetivo es asegurar al consumidor europeo suministros a precios razonables y garantizar una retribución equitativa a los agricultores."
+    },
+    {
+      key: "Acuicultura", value: "Cría y cultivo de especies animales y vegetales acuáticas, fundamentalmente con fines comerciales. Alguna de las instalaciones propias para la producción son los viveros y las piscifactorías."
+    },
+    {
+      key: "Aguas jurisdiccionales", value: "Zona marítima adyacente a la costa, que llega hasta las 12 millas marinas y en las que los Estados ejercen la plenitud de su soberanía."
+    },
+    {
+      key: "Caladero pesquero", value: "Área marítima apropiada para calar (pescar) o disponer las redes de pesca por su abundancia en una o varias especies explotables."
+    },
+    {
+      key: "Paro biológico", value: "Interrupción temporal de la actividad pesquera ante la sobreexplotación, que tiene como objetivo evitar el agotamiento y regenerar los recursos de los caladeros. Esta situación obliga a la población pescadora a quedarse en puerto, sin trabajar y cobrando el subsidio por desempleo."
+    },
+    {
+      key: "Pesca de altura", value: "Tipo pesca realizada con barcos de medio y gran tamaño equipados técnicamente y que suelen salir en pequeñas flotillas a lugares alejados del litoral. Permanecen fuera de puerto por un periodo de varias semanas, por lo que deben iniciar el proceso de conservación del pescado, mediante instalaciones frigoríficas a bordo."
+    },
+    {
+      key: "Pesca de bajura", value: "Tipo de pesca realizada durante el mismo día, en las proximidades de la costa (hasta 60 millas) utilizando pequeñas embarcaciones equipadas normalmente con métodos artesanos."
+    },
+    {
+      key: "Plataforma continental", value: "Superficie del fondo submarino próximo a la costa y con profundidades inferiores a los 200 m."
+    }
+
   ];
 
   const [gameCards, setGameCards] = useState([]); // Almacena las cartas para el juego actual
