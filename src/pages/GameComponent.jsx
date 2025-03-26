@@ -8,7 +8,6 @@ const GameComponent = () => {
 
   // Mapa de palabras y definiciones predefinidas
   const initialCards = [
-    /*
     {
       key: "Cambio climático",
       value:
@@ -503,7 +502,6 @@ const GameComponent = () => {
       value:
         "Proceso de crecimiento residencial de las periferias urbanas hacia zonas rurales, provocando un desplazamiento de residentes desde el centro de la ciudad hacia áreas suburbanas. También incluye zonas industriales y comerciales.",
     },
-  */
     {
       key: "Agricultura de regadío", value: "Práctica agraria consistente en el uso de procesos y técnicas para suministrar a los cultivos la cantidad de agua necesaria para su desarrollo o para mejorar la producción de la explotación, supliendo la ausencia o insuficiencia de las precipitaciones atmosféricas."
     },
@@ -560,8 +558,23 @@ const GameComponent = () => {
     },
     {
       key: "Plataforma continental", value: "Superficie del fondo submarino próximo a la costa y con profundidades inferiores a los 200 m."
-    }
-
+    },
+    { key: "Acuicultura", value: "Cría y cultivo de especies animales y vegetales acuáticas, fundamentalmente con fines comerciales. Alguna de las instalaciones propias para la producción son los viveros y las piscifactorías." },
+    { key: "Aguas jurisdiccionales", value: "Zona marítima adyacente a la costa, que llega hasta las 12 millas marinas y en las que los Estados ejercen la plenitud de su soberanía." },
+    { key: "Caladero pesquero", value: "Área marítima apropiada para calar (pescar) o disponer las redes de pesca por su abundancia en una o varias especies explotables." },
+    { key: "Paro biológico", value: "Interrupción temporal de la actividad pesquera ante la sobreexplotación, que tiene como objetivo evitar el agotamiento y regenerar los recursos de los caladeros. Esta situación obliga a la población pescadora a quedarse en puerto, sin trabajar y cobrando el subsidio por desempleo." },
+    { key: "Pesca de altura", value: "Tipo pesca realizada con barcos de medio y gran tamaño equipados técnicamente y que suelen salir en pequeñas flotillas a lugares alejados del litoral. Permanecen fuera de puerto por un periodo de varias semanas, por lo que deben iniciar el proceso de conservación del pescado, mediante instalaciones frigoríficas a bordo." },
+    { key: "Pesca de bajura", value: "Tipo de pesca realizada durante el mismo día, en las proximidades de la costa (hasta 60 millas) utilizando pequeñas embarcaciones equipadas normalmente con métodos artesanos." },
+    { key: "Plataforma continental", value: "Superficie del fondo submarino próximo a la costa y con profundidades inferiores a los 200 m." },
+    { key: "Central eléctrica", value: "Instalación capaz de convertir la energía mecánica, obtenida mediante otras fuentes de energía primaria, en energía eléctrica." },
+    { key: "Dependencia energética", value: "Cantidad de energía primaria que un país necesita importar para poder autoabastecerse, ya sea en forma de calor, electricidad o para el transporte." },
+    { key: "Deslocalización", value: "Proceso que consiste en el traslado de todos los centros de trabajo específicos de una empresa o de parte de ellos a determinadas áreas o países que presentan menores costes de producción para obtener mayores beneficios." },
+    { key: "Energía hidroeléctrica", value: "Es una energía renovable que se obtiene del movimiento del agua a través de sistemas de almacenamiento y caída, mediante la cual se produce electricidad." },
+    { key: "Energías renovables", value: "Son aquellas que se obtienen de fuentes naturales y que se ofrecen de modo continuo e inagotable como el sol, el agua, el viento y los residuos orgánicos. Se consideran una alternativa viable a las energías convencionales y su impacto ambiental es reducido." },
+    { key: "Fuente de energía", value: "Material, fenómeno o recurso a partir del cual podemos obtener energía, bien directamente o mediante transformación física o química. Según la disponibilidad se clasifican en: fósiles, no renovables y agotables; y renovables o alternativas." },
+    { key: "Materias primas", value: "Material en bruto que es extraído de la naturaleza, procedente del subsuelo, de la agricultura o de la explotación forestal, que es utilizado y transformado en los procesos industriales para la elaboración de bienes de consumo. Las materias primas, ya sean de origen orgánico (vegetal o animal) o inorgánico (mineral), son la base de todas las actividades industriales." },
+    { key: "Parque tecnológico", value: "Espacios que concentran empresas e instituciones dedicadas a la investigación, el desarrollo tecnológico o la innovación, vinculadas a centros de investigación, universidades y organismos financieros y de servicios que facilitan sinergias y la creación de redes. En ellos se impulsa la formación y crecimiento de empresas mediante mecanismos de incubación y generación centrífuga (spin-off). Se sitúan en espacios de la periferia urbana, de gran calidad, dotados de buenas infraestructuras y servicios." },
+    { key: "Polígono industrial", value: "Espacio urbanizado, ubicado en la periferia urbana, en el que se instalan industrias locales o de la región. Se construyen por iniciativa pública o privada y suelen contar con ventajas fiscales." }
   ];
 
   const [gameCards, setGameCards] = useState([]); // Almacena las cartas para el juego actual
