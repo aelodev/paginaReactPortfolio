@@ -8,6 +8,7 @@ const GameComponent = () => {
 
   // Mapa de palabras y definiciones predefinidas
   const initialCards = [
+    /*
     {
       key: "Cambio climático",
       value:
@@ -575,6 +576,12 @@ const GameComponent = () => {
     { key: "Materias primas", value: "Material en bruto que es extraído de la naturaleza, procedente del subsuelo, de la agricultura o de la explotación forestal, que es utilizado y transformado en los procesos industriales para la elaboración de bienes de consumo. Las materias primas, ya sean de origen orgánico (vegetal o animal) o inorgánico (mineral), son la base de todas las actividades industriales." },
     { key: "Parque tecnológico", value: "Espacios que concentran empresas e instituciones dedicadas a la investigación, el desarrollo tecnológico o la innovación, vinculadas a centros de investigación, universidades y organismos financieros y de servicios que facilitan sinergias y la creación de redes. En ellos se impulsa la formación y crecimiento de empresas mediante mecanismos de incubación y generación centrífuga (spin-off). Se sitúan en espacios de la periferia urbana, de gran calidad, dotados de buenas infraestructuras y servicios." },
     { key: "Polígono industrial", value: "Espacio urbanizado, ubicado en la periferia urbana, en el que se instalan industrias locales o de la región. Se construyen por iniciativa pública o privada y suelen contar con ventajas fiscales." }
+  */
+  { key: "Pernoctaciones", value: "Número de noches que un viajero se aloja en un establecimiento." },
+  { key: "Touroperadores", value: "Empresas mayoristas dedicadas a la organización de viajes, itinerarios y estancias de grandes grupos de turistas." },
+  { key: "Turismo cultural", value: "Conjunto de actividades turísticas relacionadas con la cultura. Se trata de una modalidad de turismo que hace referencia a los desplazamientos motivados por conocer, comprender y disfrutar de los elementos propios de una sociedad o grupo social. El turismo cultural se define también por las prácticas realizadas en el destino, tales como visitar museos y monumentos, asistir a conciertos, participar en fiestas, disfrutar de la gastronomía o el paisaje." },
+  { key: "Turismo rural", value: "Conjunto de actividades turísticas realizadas en espacios rurales, vinculadas con el disfrute del campo como principal atractivo turístico. Se trata de una modalidad turística relacionada con la oferta de alojamiento rural ya que, de manera generalizada, se entiende que es la actividad turística que se realiza cuando se usa como alojamiento las casas de turismo rural." },
+  { key: "Turistificación", value: "Impacto que tiene sobre una comunidad local que la oferta, las instalaciones y los servicios del espacio se dirijan a cubrir las necesidades del turista en lugar de las necesidades de la población fija." }
   ];
 
   const [gameCards, setGameCards] = useState([]); // Almacena las cartas para el juego actual
