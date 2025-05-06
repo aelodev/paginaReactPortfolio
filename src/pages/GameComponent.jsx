@@ -8,7 +8,6 @@ const GameComponent = () => {
 
   // Mapa de palabras y definiciones predefinidas
   const initialCards = [
-    /*
     {
       key: "Cambio climático",
       value:
@@ -504,84 +503,204 @@ const GameComponent = () => {
         "Proceso de crecimiento residencial de las periferias urbanas hacia zonas rurales, provocando un desplazamiento de residentes desde el centro de la ciudad hacia áreas suburbanas. También incluye zonas industriales y comerciales.",
     },
     {
-      key: "Agricultura de regadío", value: "Práctica agraria consistente en el uso de procesos y técnicas para suministrar a los cultivos la cantidad de agua necesaria para su desarrollo o para mejorar la producción de la explotación, supliendo la ausencia o insuficiencia de las precipitaciones atmosféricas."
+      key: "Agricultura de regadío",
+      value:
+        "Práctica agraria consistente en el uso de procesos y técnicas para suministrar a los cultivos la cantidad de agua necesaria para su desarrollo o para mejorar la producción de la explotación, supliendo la ausencia o insuficiencia de las precipitaciones atmosféricas.",
     },
     {
-      key: "Agrociudad", value: "Núcleo de población que, por su tamaño, podría considerarse una ciudad, pero por las funciones que desempeña son principalmente rurales."
+      key: "Agrociudad",
+      value:
+        "Núcleo de población que, por su tamaño, podría considerarse una ciudad, pero por las funciones que desempeña son principalmente rurales.",
     },
     {
-      key: "Barbecho", value: "Parte de una explotación agrícola cultivada con técnicas de rotación, que queda temporalmente sin cultivar, con el objetivo de que se regenere el suelo de forma natural en ese tiempo."
+      key: "Barbecho",
+      value:
+        "Parte de una explotación agrícola cultivada con técnicas de rotación, que queda temporalmente sin cultivar, con el objetivo de que se regenere el suelo de forma natural en ese tiempo.",
     },
     {
-      key: "Dehesa", value: "Tipo de explotación agro-silvo-pastoril propia de la zona mediterránea y del sur de España, en la que se combinan actividades agrícolas, ganaderas y forestales en zonas ahuecadas de bosque mediterráneo, dando lugar a un paisaje cultural creado y mantenido por la población local. Las especies dominantes son la encina y el alcornoque."
+      key: "Dehesa",
+      value:
+        "Tipo de explotación agro-silvo-pastoril propia de la zona mediterránea y del sur de España, en la que se combinan actividades agrícolas, ganaderas y forestales en zonas ahuecadas de bosque mediterráneo, dando lugar a un paisaje cultural creado y mantenido por la población local. Las especies dominantes son la encina y el alcornoque.",
     },
     {
-      key: "Explotación agraria", value: "Conjunto de parcelas que cultiva un mismo agricultor, independientemente de su forma de tenencia (propiedad, arrendamiento, aparcería, etc.)."
+      key: "Explotación agraria",
+      value:
+        "Conjunto de parcelas que cultiva un mismo agricultor, independientemente de su forma de tenencia (propiedad, arrendamiento, aparcería, etc.).",
     },
     {
-      key: "Hábitat concentrado", value: "Tipo de poblamiento o forma que tiene la población de un lugar de ocupar el territorio, en el que las viviendas forman un núcleo continuo sin espacios agrarios entre ellas."
+      key: "Hábitat concentrado",
+      value:
+        "Tipo de poblamiento o forma que tiene la población de un lugar de ocupar el territorio, en el que las viviendas forman un núcleo continuo sin espacios agrarios entre ellas.",
     },
     {
-      key: "Hábitat disperso", value: "Tipo de poblamiento o forma que tiene la población de un lugar de ocupar el territorio, en el que las viviendas se encuentran aisladas unas de otras y rodeadas de la propia explotación agraria, existiendo un pequeño núcleo central en el que se encuentran concentrados los servicios del municipio."
+      key: "Hábitat disperso",
+      value:
+        "Tipo de poblamiento o forma que tiene la población de un lugar de ocupar el territorio, en el que las viviendas se encuentran aisladas unas de otras y rodeadas de la propia explotación agraria, existiendo un pequeño núcleo central en el que se encuentran concentrados los servicios del municipio.",
     },
     {
-      key: "Latifundio", value: "Explotación agraria de gran tamaño, normalmente de producción extensiva orientada al mercado. En España se localiza fundamentalmente en la mitad sur."
+      key: "Latifundio",
+      value:
+        "Explotación agraria de gran tamaño, normalmente de producción extensiva orientada al mercado. En España se localiza fundamentalmente en la mitad sur.",
     },
     {
-      key: "Minifundio", value: "Explotación agraria de pequeño tamaño, cuya producción suele ser de policultivo y estar orientada al autoconsumo. En España se localiza sobre todo en el norte y levante."
+      key: "Minifundio",
+      value:
+        "Explotación agraria de pequeño tamaño, cuya producción suele ser de policultivo y estar orientada al autoconsumo. En España se localiza sobre todo en el norte y levante.",
     },
     {
-      key: "Monocultivo", value: "Sistema de cultivo basado en la producción de un único producto en toda la explotación agrícola. Este tipo de producción va destinada al mercado y está asociada a grandes explotaciones."
+      key: "Monocultivo",
+      value:
+        "Sistema de cultivo basado en la producción de un único producto en toda la explotación agrícola. Este tipo de producción va destinada al mercado y está asociada a grandes explotaciones.",
     },
     {
-      key: "Parcela de cultivo", value: "Porción pequeña de terreno, considerada la unidad técnico-económica de la explotación agraria y delimitada por una linde común."
+      key: "Parcela de cultivo",
+      value:
+        "Porción pequeña de terreno, considerada la unidad técnico-económica de la explotación agraria y delimitada por una linde común.",
     },
     {
-      key: "Política Agraria Común (PAC)", value: "Normas acerca de la agricultura decididas por la Unión Europea para los países miembros. Su objetivo es asegurar al consumidor europeo suministros a precios razonables y garantizar una retribución equitativa a los agricultores."
+      key: "Política Agraria Común (PAC)",
+      value:
+        "Normas acerca de la agricultura decididas por la Unión Europea para los países miembros. Su objetivo es asegurar al consumidor europeo suministros a precios razonables y garantizar una retribución equitativa a los agricultores.",
     },
     {
-      key: "Acuicultura", value: "Cría y cultivo de especies animales y vegetales acuáticas, fundamentalmente con fines comerciales. Alguna de las instalaciones propias para la producción son los viveros y las piscifactorías."
+      key: "Acuicultura",
+      value:
+        "Cría y cultivo de especies animales y vegetales acuáticas, fundamentalmente con fines comerciales. Alguna de las instalaciones propias para la producción son los viveros y las piscifactorías.",
     },
     {
-      key: "Aguas jurisdiccionales", value: "Zona marítima adyacente a la costa, que llega hasta las 12 millas marinas y en las que los Estados ejercen la plenitud de su soberanía."
+      key: "Aguas jurisdiccionales",
+      value:
+        "Zona marítima adyacente a la costa, que llega hasta las 12 millas marinas y en las que los Estados ejercen la plenitud de su soberanía.",
     },
     {
-      key: "Caladero pesquero", value: "Área marítima apropiada para calar (pescar) o disponer las redes de pesca por su abundancia en una o varias especies explotables."
+      key: "Caladero pesquero",
+      value:
+        "Área marítima apropiada para calar (pescar) o disponer las redes de pesca por su abundancia en una o varias especies explotables.",
     },
     {
-      key: "Paro biológico", value: "Interrupción temporal de la actividad pesquera ante la sobreexplotación, que tiene como objetivo evitar el agotamiento y regenerar los recursos de los caladeros. Esta situación obliga a la población pescadora a quedarse en puerto, sin trabajar y cobrando el subsidio por desempleo."
+      key: "Paro biológico",
+      value:
+        "Interrupción temporal de la actividad pesquera ante la sobreexplotación, que tiene como objetivo evitar el agotamiento y regenerar los recursos de los caladeros. Esta situación obliga a la población pescadora a quedarse en puerto, sin trabajar y cobrando el subsidio por desempleo.",
     },
     {
-      key: "Pesca de altura", value: "Tipo pesca realizada con barcos de medio y gran tamaño equipados técnicamente y que suelen salir en pequeñas flotillas a lugares alejados del litoral. Permanecen fuera de puerto por un periodo de varias semanas, por lo que deben iniciar el proceso de conservación del pescado, mediante instalaciones frigoríficas a bordo."
+      key: "Pesca de altura",
+      value:
+        "Tipo pesca realizada con barcos de medio y gran tamaño equipados técnicamente y que suelen salir en pequeñas flotillas a lugares alejados del litoral. Permanecen fuera de puerto por un periodo de varias semanas, por lo que deben iniciar el proceso de conservación del pescado, mediante instalaciones frigoríficas a bordo.",
     },
     {
-      key: "Pesca de bajura", value: "Tipo de pesca realizada durante el mismo día, en las proximidades de la costa (hasta 60 millas) utilizando pequeñas embarcaciones equipadas normalmente con métodos artesanos."
+      key: "Pesca de bajura",
+      value:
+        "Tipo de pesca realizada durante el mismo día, en las proximidades de la costa (hasta 60 millas) utilizando pequeñas embarcaciones equipadas normalmente con métodos artesanos.",
     },
     {
-      key: "Plataforma continental", value: "Superficie del fondo submarino próximo a la costa y con profundidades inferiores a los 200 m."
+      key: "Plataforma continental",
+      value:
+        "Superficie del fondo submarino próximo a la costa y con profundidades inferiores a los 200 m.",
     },
-    { key: "Acuicultura", value: "Cría y cultivo de especies animales y vegetales acuáticas, fundamentalmente con fines comerciales. Alguna de las instalaciones propias para la producción son los viveros y las piscifactorías." },
-    { key: "Aguas jurisdiccionales", value: "Zona marítima adyacente a la costa, que llega hasta las 12 millas marinas y en las que los Estados ejercen la plenitud de su soberanía." },
-    { key: "Caladero pesquero", value: "Área marítima apropiada para calar (pescar) o disponer las redes de pesca por su abundancia en una o varias especies explotables." },
-    { key: "Paro biológico", value: "Interrupción temporal de la actividad pesquera ante la sobreexplotación, que tiene como objetivo evitar el agotamiento y regenerar los recursos de los caladeros. Esta situación obliga a la población pescadora a quedarse en puerto, sin trabajar y cobrando el subsidio por desempleo." },
-    { key: "Pesca de altura", value: "Tipo pesca realizada con barcos de medio y gran tamaño equipados técnicamente y que suelen salir en pequeñas flotillas a lugares alejados del litoral. Permanecen fuera de puerto por un periodo de varias semanas, por lo que deben iniciar el proceso de conservación del pescado, mediante instalaciones frigoríficas a bordo." },
-    { key: "Pesca de bajura", value: "Tipo de pesca realizada durante el mismo día, en las proximidades de la costa (hasta 60 millas) utilizando pequeñas embarcaciones equipadas normalmente con métodos artesanos." },
-    { key: "Plataforma continental", value: "Superficie del fondo submarino próximo a la costa y con profundidades inferiores a los 200 m." },
-    { key: "Central eléctrica", value: "Instalación capaz de convertir la energía mecánica, obtenida mediante otras fuentes de energía primaria, en energía eléctrica." },
-    { key: "Dependencia energética", value: "Cantidad de energía primaria que un país necesita importar para poder autoabastecerse, ya sea en forma de calor, electricidad o para el transporte." },
-    { key: "Deslocalización", value: "Proceso que consiste en el traslado de todos los centros de trabajo específicos de una empresa o de parte de ellos a determinadas áreas o países que presentan menores costes de producción para obtener mayores beneficios." },
-    { key: "Energía hidroeléctrica", value: "Es una energía renovable que se obtiene del movimiento del agua a través de sistemas de almacenamiento y caída, mediante la cual se produce electricidad." },
-    { key: "Energías renovables", value: "Son aquellas que se obtienen de fuentes naturales y que se ofrecen de modo continuo e inagotable como el sol, el agua, el viento y los residuos orgánicos. Se consideran una alternativa viable a las energías convencionales y su impacto ambiental es reducido." },
-    { key: "Fuente de energía", value: "Material, fenómeno o recurso a partir del cual podemos obtener energía, bien directamente o mediante transformación física o química. Según la disponibilidad se clasifican en: fósiles, no renovables y agotables; y renovables o alternativas." },
-    { key: "Materias primas", value: "Material en bruto que es extraído de la naturaleza, procedente del subsuelo, de la agricultura o de la explotación forestal, que es utilizado y transformado en los procesos industriales para la elaboración de bienes de consumo. Las materias primas, ya sean de origen orgánico (vegetal o animal) o inorgánico (mineral), son la base de todas las actividades industriales." },
-    { key: "Parque tecnológico", value: "Espacios que concentran empresas e instituciones dedicadas a la investigación, el desarrollo tecnológico o la innovación, vinculadas a centros de investigación, universidades y organismos financieros y de servicios que facilitan sinergias y la creación de redes. En ellos se impulsa la formación y crecimiento de empresas mediante mecanismos de incubación y generación centrífuga (spin-off). Se sitúan en espacios de la periferia urbana, de gran calidad, dotados de buenas infraestructuras y servicios." },
-    { key: "Polígono industrial", value: "Espacio urbanizado, ubicado en la periferia urbana, en el que se instalan industrias locales o de la región. Se construyen por iniciativa pública o privada y suelen contar con ventajas fiscales." }
-  */
-  { key: "Pernoctaciones", value: "Número de noches que un viajero se aloja en un establecimiento." },
-  { key: "Touroperadores", value: "Empresas mayoristas dedicadas a la organización de viajes, itinerarios y estancias de grandes grupos de turistas." },
-  { key: "Turismo cultural", value: "Conjunto de actividades turísticas relacionadas con la cultura. Se trata de una modalidad de turismo que hace referencia a los desplazamientos motivados por conocer, comprender y disfrutar de los elementos propios de una sociedad o grupo social. El turismo cultural se define también por las prácticas realizadas en el destino, tales como visitar museos y monumentos, asistir a conciertos, participar en fiestas, disfrutar de la gastronomía o el paisaje." },
-  { key: "Turismo rural", value: "Conjunto de actividades turísticas realizadas en espacios rurales, vinculadas con el disfrute del campo como principal atractivo turístico. Se trata de una modalidad turística relacionada con la oferta de alojamiento rural ya que, de manera generalizada, se entiende que es la actividad turística que se realiza cuando se usa como alojamiento las casas de turismo rural." },
-  { key: "Turistificación", value: "Impacto que tiene sobre una comunidad local que la oferta, las instalaciones y los servicios del espacio se dirijan a cubrir las necesidades del turista en lugar de las necesidades de la población fija." }
+    {
+      key: "Acuicultura",
+      value:
+        "Cría y cultivo de especies animales y vegetales acuáticas, fundamentalmente con fines comerciales. Alguna de las instalaciones propias para la producción son los viveros y las piscifactorías.",
+    },
+    {
+      key: "Aguas jurisdiccionales",
+      value:
+        "Zona marítima adyacente a la costa, que llega hasta las 12 millas marinas y en las que los Estados ejercen la plenitud de su soberanía.",
+    },
+    {
+      key: "Caladero pesquero",
+      value:
+        "Área marítima apropiada para calar (pescar) o disponer las redes de pesca por su abundancia en una o varias especies explotables.",
+    },
+    {
+      key: "Paro biológico",
+      value:
+        "Interrupción temporal de la actividad pesquera ante la sobreexplotación, que tiene como objetivo evitar el agotamiento y regenerar los recursos de los caladeros. Esta situación obliga a la población pescadora a quedarse en puerto, sin trabajar y cobrando el subsidio por desempleo.",
+    },
+    {
+      key: "Pesca de altura",
+      value:
+        "Tipo pesca realizada con barcos de medio y gran tamaño equipados técnicamente y que suelen salir en pequeñas flotillas a lugares alejados del litoral. Permanecen fuera de puerto por un periodo de varias semanas, por lo que deben iniciar el proceso de conservación del pescado, mediante instalaciones frigoríficas a bordo.",
+    },
+    {
+      key: "Pesca de bajura",
+      value:
+        "Tipo de pesca realizada durante el mismo día, en las proximidades de la costa (hasta 60 millas) utilizando pequeñas embarcaciones equipadas normalmente con métodos artesanos.",
+    },
+    {
+      key: "Plataforma continental",
+      value:
+        "Superficie del fondo submarino próximo a la costa y con profundidades inferiores a los 200 m.",
+    },
+    {
+      key: "Central eléctrica",
+      value:
+        "Instalación capaz de convertir la energía mecánica, obtenida mediante otras fuentes de energía primaria, en energía eléctrica.",
+    },
+    {
+      key: "Dependencia energética",
+      value:
+        "Cantidad de energía primaria que un país necesita importar para poder autoabastecerse, ya sea en forma de calor, electricidad o para el transporte.",
+    },
+    {
+      key: "Deslocalización",
+      value:
+        "Proceso que consiste en el traslado de todos los centros de trabajo específicos de una empresa o de parte de ellos a determinadas áreas o países que presentan menores costes de producción para obtener mayores beneficios.",
+    },
+    {
+      key: "Energía hidroeléctrica",
+      value:
+        "Es una energía renovable que se obtiene del movimiento del agua a través de sistemas de almacenamiento y caída, mediante la cual se produce electricidad.",
+    },
+    {
+      key: "Energías renovables",
+      value:
+        "Son aquellas que se obtienen de fuentes naturales y que se ofrecen de modo continuo e inagotable como el sol, el agua, el viento y los residuos orgánicos. Se consideran una alternativa viable a las energías convencionales y su impacto ambiental es reducido.",
+    },
+    {
+      key: "Fuente de energía",
+      value:
+        "Material, fenómeno o recurso a partir del cual podemos obtener energía, bien directamente o mediante transformación física o química. Según la disponibilidad se clasifican en: fósiles, no renovables y agotables; y renovables o alternativas.",
+    },
+    {
+      key: "Materias primas",
+      value:
+        "Material en bruto que es extraído de la naturaleza, procedente del subsuelo, de la agricultura o de la explotación forestal, que es utilizado y transformado en los procesos industriales para la elaboración de bienes de consumo. Las materias primas, ya sean de origen orgánico (vegetal o animal) o inorgánico (mineral), son la base de todas las actividades industriales.",
+    },
+    {
+      key: "Parque tecnológico",
+      value:
+        "Espacios que concentran empresas e instituciones dedicadas a la investigación, el desarrollo tecnológico o la innovación, vinculadas a centros de investigación, universidades y organismos financieros y de servicios que facilitan sinergias y la creación de redes. En ellos se impulsa la formación y crecimiento de empresas mediante mecanismos de incubación y generación centrífuga (spin-off). Se sitúan en espacios de la periferia urbana, de gran calidad, dotados de buenas infraestructuras y servicios.",
+    },
+    {
+      key: "Polígono industrial",
+      value:
+        "Espacio urbanizado, ubicado en la periferia urbana, en el que se instalan industrias locales o de la región. Se construyen por iniciativa pública o privada y suelen contar con ventajas fiscales.",
+    },
+    {
+      key: "Pernoctaciones",
+      value: "Número de noches que un viajero se aloja en un establecimiento.",
+    },
+    {
+      key: "Touroperadores",
+      value:
+        "Empresas mayoristas dedicadas a la organización de viajes, itinerarios y estancias de grandes grupos de turistas.",
+    },
+    {
+      key: "Turismo cultural",
+      value:
+        "Conjunto de actividades turísticas relacionadas con la cultura. Se trata de una modalidad de turismo que hace referencia a los desplazamientos motivados por conocer, comprender y disfrutar de los elementos propios de una sociedad o grupo social. El turismo cultural se define también por las prácticas realizadas en el destino, tales como visitar museos y monumentos, asistir a conciertos, participar en fiestas, disfrutar de la gastronomía o el paisaje.",
+    },
+    {
+      key: "Turismo rural",
+      value:
+        "Conjunto de actividades turísticas realizadas en espacios rurales, vinculadas con el disfrute del campo como principal atractivo turístico. Se trata de una modalidad turística relacionada con la oferta de alojamiento rural ya que, de manera generalizada, se entiende que es la actividad turística que se realiza cuando se usa como alojamiento las casas de turismo rural.",
+    },
+    {
+      key: "Turistificación",
+      value:
+        "Impacto que tiene sobre una comunidad local que la oferta, las instalaciones y los servicios del espacio se dirijan a cubrir las necesidades del turista en lugar de las necesidades de la población fija.",
+    },
   ];
 
   const [gameCards, setGameCards] = useState([]); // Almacena las cartas para el juego actual
